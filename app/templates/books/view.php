@@ -18,7 +18,8 @@
     <?php foreach ($detail as $det) :?>
         <img src="<?= $det->resim ?>" alt="resim">
         <div class="author">
-            <h4> YAZAR : </h4>
+            <h4> YAZAR : <?= $det->ad; ?> </h4>
+            <h4> YAYIN EVİ : <?= $det->ad; ?> </h4>
         </div>
     </div>
 

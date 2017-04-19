@@ -15,7 +15,7 @@
 
      public function detail(){
          global $db;
-        $query = $db->query("select * from kitap",PDO::FETCH_OBJ);
+        $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id;",PDO::FETCH_OBJ);
         
         if($query->rowCount())
         {
