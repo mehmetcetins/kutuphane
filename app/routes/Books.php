@@ -14,7 +14,8 @@
      }
 
      public function detail(){
-         global $db;
+        if(!isset($_GET["id"])) header("Location:/kitaplar");
+        global $db;
         $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id INNER JOIN yayin ON kitap.yayin = yayin.id where kitap.id=".$_GET['id']."",PDO::FETCH_OBJ);
         
         if($query->rowCount())
@@ -23,5 +24,19 @@
         }
 
      }
+     
+     public function borrow(){
+        render("/books/list");
+        global $db;
+        $db->exec("INSERT INTO odunc(ogrenci,tarih,teslim,kitap) values(
+        '".$_POST["ogrenci"]."',
+        ".date("d-m-Y").",
+        ".$_POST["teslim"].",
+        ".$_GET["id"]."
+        )");
+        
+     }
 
  }
+
+ 
