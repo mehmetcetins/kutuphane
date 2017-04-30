@@ -25,6 +25,7 @@
         <div class="author">
             <h4> YAZAR : <?= $det->ad; ?> </h4>
             <h4> YAYIN EVİ : <?= $det->y_ad; ?> </h4>
+            <h4> BASIM YILI : <?= $det->yil;?> </h4>
             <h4> ISBN : <?= $det->isbn ?></h4>
             <h4> KITAP YERİ : <?php
                 $arr = explode("-",$det->konum); 

@@ -6,6 +6,7 @@ $url = '/' . $_GET['route'];
 $routes = [];
     try{
         $db = new PDO("mysql:host=localhost;dbname=kutuphane;charset=utf8","root","");
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e){
         $e->getMessage();
     }
