@@ -31,6 +31,7 @@
                 $arr = explode("-",$det->konum); 
                 echo "Blok : $arr[0]   Raf : $arr[1]";
             ?>
+            <h4> KAYNAK : <?=$det->kaynak?></h4>
             <form class='oduncform' action='/kitaplar/odunc?id=<?=$_GET["id"]?>' method='post'>
                 <h4>OKUL NUMARANIZ <input type="text" name="ogrenci"></h4>
                 <h4>TESLiM TARİHİ <input type="date" name="teslim" ></h4>
