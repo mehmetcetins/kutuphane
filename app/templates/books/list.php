@@ -2,12 +2,6 @@
 
 <style>
 
-body{
-   margin:0;
-}
-a{
-    text-decoration:none;
-}
 .contents{
     width:300px;
     height:520px;
@@ -48,17 +42,7 @@ a{
     font-size:17px ;
     white-space:nowrap;
 }
-.box{
-    background:#3E3E3E;
-    height:50px;
-    font-size:36px;
-    color:#E2E2E2;
-    padding-left:30px;
-    padding-top:10px;
-}
-.box a{
-    color:#E2E2E2;
-}
+
 
 .books{
     padding:10 80 0 60;
@@ -73,11 +57,7 @@ a{
 }
 
 </style>
-<div class="box">
-    <a href="/">
-        <span> KÜTÜPHANE </span>
-    </a>
-</div>
+
 <div class="books clear">
 <?php foreach($kitaplar as $kitap): ?>
     <div class="contents">
