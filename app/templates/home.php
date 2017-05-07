@@ -22,6 +22,6 @@
     </div> 
     <div class="kitap">
         <button><a href="/kitaplar">KİTAPLAR</a></button>
-        <button><a href="javascript://">ÖDÜNC</a></button>
+        <button><a href="/odunc">ÖDÜNÇ ALDIKLARIM</a></button>
     </div>
 </div>

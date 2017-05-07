@@ -6,5 +6,7 @@ return [
         '/kitaplar' => 'routes/Books@index',
         '/kitaplar/detay' => 'routes/Books@detail',
         '/kitaplar/odunc' => 'routes/Books@borrow',
+        '/odunc' => 'routes/Borrow@index',
+        '/odunc/teslim' => 'routes/Borrow@back',
     ]
 ];

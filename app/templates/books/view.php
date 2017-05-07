@@ -33,8 +33,8 @@
             ?>
             <h4> KAYNAK : <?=$det->kaynak?></h4>
             <form class='oduncform' action='/kitaplar/odunc?id=<?=$_GET["id"]?>' method='post'>
-                <h4>OKUL NUMARANIZ <input type="text" name="ogrenci"></h4>
-                <h4>TESLiM TARİHİ <input type="date" name="teslim" ></h4>
+                <h4>OKUL NUMARANIZ <input type="text" name="ogrenci" required></h4>
+                <h4>TESLiM TARİHİ <input type="date" name="teslim" required min="<?=date('Y-m-d',time()+60*60*24)?>"></h4>
                 <input type="submit" name "borrow" value="ÖDÜNÇ AL">
             </form>
         </div>
