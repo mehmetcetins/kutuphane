@@ -4,7 +4,17 @@
      
      public function index(){
         global $db;
-        $query = $db->query("select * from kitap",PDO::FETCH_OBJ);
+        global $e;
+        if(isset($_GET["ara"])){
+            $ara = $_GET["ara"];
+            $query= $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
+            INNER JOIN yayin ON kitap.yayin = yayin.id
+            WHERE ad like '%$ara%' or yayin_ad like '%$ara%' or yazar_ad like '%$ara%' or isbn like '%$ara%' ",PDO::FETCH_OBJ);
+        }
+        else{
+            $query = $db->query("select * from kitap",PDO::FETCH_OBJ);
+        }
+        
 
         if($query->rowCount())
         {
