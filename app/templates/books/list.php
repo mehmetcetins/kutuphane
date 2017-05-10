@@ -3,37 +3,24 @@
 <style>
 
 .contents{
-    width:300px;
-    height:520px;
+    width:100%;
+    height:260px;
     background-color:#EB5757;
-    float:left;
-    margin-left:20px;
     margin-bottom:30px;
 }
 
-
+.button {
+    display:block;
+}
 
 .contents img{
-    width:254px;
-    height:378px;
+    width:146px;
+    height:220px;
+    float:left;
 }
 
-.button {
-    line-height:50px;
-    width:200px;
-    height:50px;
-    background-color:white;
-    text-transform:uppercase;
-    color:#EB5757;
-    margin: auto;
-    position: relative;
-    top:20px;
-    text-align:center;
-    display: block;
-}
-.contents div {
-    height: 520px;
-    padding: 23px;
+.contents > div {
+    padding: 20px;
     box-sizing: border-box;
 
 }
@@ -42,13 +29,21 @@
     font-size:17px ;
     white-space:nowrap;
 }
-
+.contents h4{
+    color:white;
+}
+.contents div div {
+    margin-left:30px;
+    float:left;
+    height:220px;
+}
+.contents div div span{
+    font-weight:normal;
+    font-size:17px;
+}
 
 .books{
     padding:10 80 0 60;
-}
-.contents:nth-child(5n),.contents:first-child{
-    margin-left:0;
 }
 .clear::after{
     content:"";
@@ -60,13 +55,24 @@
 
 <div class="books clear">
 <?php foreach($kitaplar as $kitap): ?>
+<a class="clear button" href="kitaplar/detay?id=<?= $kitap->id?>">
     <div class="contents">
-        <div>
-            <img src="<?= $kitap->resim ?>" alt="RESİM">
-            <center> <span><?= $kitap->ad ?></span></center>
-            <a class="button" href="kitaplar/detay?id=<?= $kitap->id?>">incele</a>
+        <div class="clear">
+            <img src="<?= $kitap->resim ?>"  class="clear"  alt="RESİM">
+            <div >
+                <h4>KİTAP ADI : <span><?= $kitap->ad ?></span></h4>
+                <h4>YAZAR : <span><?= $kitap->yazar_ad ?></span></h4>
+                <h4>YAYINCI : <span><?= $kitap->yayin_ad ?></span></h4>
+                <h4>KONUM : <span><?php
+                $arr = explode("-",$kitap->konum); 
+                echo "Blok : $arr[0]   Raf : $arr[1]";
+                ?></span></h4>
+                <h4>ISBN : <span><?= $kitap->isbn ?></span></h4>
+               
+            </div>
         </div>
     </div>
+    </a>
     
 <?php endforeach; ?>
 
