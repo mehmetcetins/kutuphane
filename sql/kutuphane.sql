@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 10 May 2017, 18:34:42
+-- Üretim Zamanı: 10 May 2017, 19:47:45
 -- Sunucu sürümü: 5.7.11
 -- PHP Sürümü: 7.0.4
 
@@ -67,7 +67,30 @@ CREATE TABLE `odunc` (
 
 INSERT INTO `odunc` (`id`, `ogrenci`, `tarih`, `teslim`, `kitap`) VALUES
 (4, '228', '2017-05-06', '2018-01-01', 1),
-(6, '228', '2017-05-07', '2017-05-18', 2);
+(6, '228', '2017-05-07', '2017-05-18', 2),
+(7, '33', '2017-05-10', '2017-05-26', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `ogrenci`
+--
+
+CREATE TABLE `ogrenci` (
+  `id` int(11) NOT NULL,
+  `ogrenci_ad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `soyad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `numara` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
+  `sinif` varchar(20) COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `ogrenci`
+--
+
+INSERT INTO `ogrenci` (`id`, `ogrenci_ad`, `soyad`, `numara`, `sinif`) VALUES
+(1, 'mehmet', 'çetin', '228', '12-E'),
+(2, 'selami', 'kelaynak', '33', '12-B');
 
 -- --------------------------------------------------------
 
@@ -124,6 +147,12 @@ ALTER TABLE `odunc`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Tablo için indeksler `ogrenci`
+--
+ALTER TABLE `ogrenci`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Tablo için indeksler `yayin`
 --
 ALTER TABLE `yayin`
@@ -148,7 +177,12 @@ ALTER TABLE `kitap`
 -- Tablo için AUTO_INCREMENT değeri `odunc`
 --
 ALTER TABLE `odunc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- Tablo için AUTO_INCREMENT değeri `ogrenci`
+--
+ALTER TABLE `ogrenci`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Tablo için AUTO_INCREMENT değeri `yayin`
 --

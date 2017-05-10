@@ -64,7 +64,7 @@
                 <h4>YAZAR : <span><?= $kitap->yazar_ad ?></span></h4>
                 <h4>YAYINCI : <span><?= $kitap->yayin_ad ?></span></h4>
                 <h4>KONUM : <span><?php
-                $arr = explode("-",$kitap->konum); 
+                $arr = explode("-", $kitap->konum); 
                 echo "Blok : $arr[0]   Raf : $arr[1]";
                 ?></span></h4>
                 <h4>ISBN : <span><?= $kitap->isbn ?></span></h4>
