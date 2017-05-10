@@ -1,50 +1,31 @@
-<style>
-.detail {
-    margin:auto 150px;
-
-}
-.detailb img{
-    float:left;
-}
-.author{
-    float:left;
-}
-.clear::after{
-    content:"";
-    clear:both;
-    display:block;
-}
-
-</style>
-
-<div class= "detail">
-
-    <div class="detailb clear">
+<div class= "book-detail">
     <?php foreach ($detail as $det) :?>
-        <img src="<?= $det->resim ?>" alt="resim">
-        <div class="author">
-            <h4> YAZAR : <?= $det->ad; ?> </h4>
-            <h4> YAYIN EVİ : <?= $det->y_ad; ?> </h4>
-            <h4> BASIM YILI : <?= $det->yil;?> </h4>
-            <h4> ISBN : <?= $det->isbn ?></h4>
-            <h4> KITAP YERİ : <?php
-                $arr = explode("-",$det->konum); 
-                echo "Blok : $arr[0]   Raf : $arr[1]";
-            ?>
+        <img src="<?= $det->resim ?>" alt="resim" align="left" />
+        <div class="book-badge">
+            <span><strong>Yazar:</strong> <?= $det->ad; ?></span>
+            <span><strong>Yayın Evi:</strong> <?= $det->y_ad; ?></span>
+            <span><strong>Basım Yılı:</strong> <?= $det->yil; ?></span>
+            <span><strong>Kitap Yeri:</strong> <?php $arr = explode("-",$det->konum); echo "Blok : $arr[0]   Raf : $arr[1]"; ?></span>
+            <span><strong>ISBN:</strong> <?= $det->isbn; ?></span>
+        </div>
+        <div class="book-summary">
+            <?=$det->ozet ?>
+        </div>
+        <div class="book-borrow">
             <form class='oduncform' action='/kitaplar/odunc?id=<?=$_GET["id"]?>' method='post'>
-                <h4>OKUL NUMARANIZ <input type="text" name="ogrenci"></h4>
-                <h4>TESLiM TARİHİ <input type="date" name="teslim" ></h4>
-                <input type="submit" name "borrow" value="ÖDÜNÇ AL">
+                <div class="form-group">
+                    <label>Öğrenci Numarası:</label>
+                    <input type="text" name="ogrenci" />
+                </div>
+                <div class="form-group">
+                    <label>Teslim Tarihi:</label>
+                    <input type="date" name="teslim" />
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <input type="submit" name "borrow" value="Ödünç Ver">
+                </div>
             </form>
         </div>
-    </div>
-    <div class="brief clear">
-        <p>
-        
-            <?=$det->ozet ?>
-        
-        </p>
-    </div>
-
     <?php endforeach; ?>
 </div>

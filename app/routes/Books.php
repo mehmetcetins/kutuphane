@@ -20,7 +20,7 @@
         
         if($query->rowCount())
         {
-            render("books/view",["detail"=>$query]);
+            render("books/view", ["detail"=>$query]);
         }
 
      }
