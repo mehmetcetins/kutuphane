@@ -1,0 +1,102 @@
+html, body,
+p, h1, h2, h3, h4, h5, h6
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 1000px;
+  margin: auto; }
+
+.main-content {
+  margin-top: 20px; }
+
+header {
+  padding: 10px;
+  background: #3E3E3E;
+  color: #FFF; }
+  header:after {
+    clear: both;
+    display: block;
+    content: ""; }
+  header .logo {
+    float: left;
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+    header .logo a {
+      color: inherit;
+      text-decoration: none; }
+  header nav {
+    float: right; }
+    header nav a {
+      padding: 0 20px;
+      line-height: 3em;
+      color: inherit;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif; }
+
+footer {
+  border-top: 1px solid #dfdfdf;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px !important; }
+
+.books-list {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .books-list .books-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; }
+    .books-list .books-item img {
+      max-width: 175px; }
+    .books-list .books-item span.name {
+      padding: 10px 15px;
+      color: black;
+      text-align: center; }
+
+.book-detail:after {
+  clear: both;
+  display: block;
+  content: ""; }
+.book-detail img {
+  margin-right: 20px;
+  width: 415px; }
+.book-detail .book-badge span {
+  display: block; }
+  .book-detail .book-badge span strong {
+    display: inline-block;
+    min-width: 100px;
+    font-size: 1.2em; }
+.book-detail .book-summary {
+  margin: 20px 0; }
+.book-detail .book-borrow form {
+  margin-left: 435px; }
+
+form {
+  font-family: Arial, Helvetica, sans-serif; }
+  form .form-group:not(:first-child) {
+    margin-top: 10px; }
+  form .form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px; }
+  form .form-group input:not([type=radio]):not([type=checkbox]) {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 1s all;
+    padding: 5px;
+    font-size: 1.1em; }
+    form .form-group input:not([type=radio]):not([type=checkbox]):active {
+      outline: none;
+      border-color: black; }
+
+/*# sourceMappingURL=style.css.map */
