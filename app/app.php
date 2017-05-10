@@ -8,5 +8,7 @@ return [
         '/kitaplar/odunc' => 'routes/Books@borrow',
         '/odunc' => 'routes/Borrow@index',
         '/odunc/teslim' => 'routes/Borrow@back',
+        '/kitap' => 'routes/Book@index',
+        '/kitap/ekle' => 'routes/Book@add',
     ]
 ];

@@ -49,5 +49,6 @@
     <div class="kitap">
         <button><a href="/kitaplar">KİTAPLAR</a></button>
         <button><a href="/odunc">ÖDÜNÇ ALDIKLARIM</a></button>
+        <button><a href="/kitap">YENİ KİTAP EKLE</a></button>
     </div>
 </div>
