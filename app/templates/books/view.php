@@ -23,7 +23,7 @@
     <?php foreach ($detail as $det) :?>
         <img src="<?= $det->resim ?>" alt="resim">
         <div class="author">
-            <h4> YAZAR : <?= $det->ad; ?> </h4>
+            <h4> YAZAR : <?= $det->yazar_ad; ?> </h4>
             <h4> YAYIN EVİ : <?= $det->yayin_ad; ?> </h4>
             <h4> BASIM YILI : <?= $det->yil;?> </h4>
             <h4> ISBN : <?= $det->isbn ?></h4>

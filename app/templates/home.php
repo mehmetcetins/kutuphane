@@ -28,6 +28,12 @@
         border:0;
 
     }
+    .sonuc {
+        color:white;
+        font-size:14px;
+        text-transform:uppercase;
+
+    }
 </style>
 
 <div class="panel">
@@ -35,6 +41,9 @@
         <form action="/kitaplar" method="get">
             <input type="text" placeholder= "Kitap Adı, Yazar, Yayıncı, ISBN" name="ara" class="ara">
             <input type="submit" class="arbutton" value="ara">
+            <?php
+            if(isset($sonuc)) {echo "<span class='sonuc'>$sonuc</span>";}
+            ?>
         </form>
     </div> 
     <div class="kitap">

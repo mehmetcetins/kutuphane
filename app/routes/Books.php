@@ -20,6 +20,12 @@
         {
             render("books/list",["kitaplar"=>$query]);
         }
+        else {
+            session_start();
+
+            $_SESSION["sonuc"] = "";
+            header("location:/");
+        }
 
      }
 
