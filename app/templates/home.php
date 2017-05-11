@@ -2,8 +2,7 @@
 <style>
     .panel{
 
-        margin:auto auto;
-        margin-top:300px;
+        margin:200px auto;
         width:500px;
 
     }
@@ -20,12 +19,14 @@
         padding:10px;
         text-transform:uppercase;
         color:white;
+        width:10%;
     }
     .ara{
 
         padding:10px;
         text-transform:uppercase;
         border:0;
+        width:89%;
 
     }
     .sonuc {
