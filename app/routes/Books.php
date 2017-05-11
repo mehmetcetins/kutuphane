@@ -7,12 +7,12 @@
         global $e;
         if(isset($_GET["ara"])){
             $ara = $_GET["ara"];
-            $query= $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
+            $query= $db->query("SELECT *,kitap.id as katid FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
             INNER JOIN yayin ON kitap.yayin = yayin.id
             WHERE ad like '%$ara%' or yayin_ad like '%$ara%' or yazar_ad like '%$ara%' or isbn like '%$ara%' ",PDO::FETCH_OBJ);
         }
         else{
-            $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
+            $query = $db->query("SELECT *,kitap.id as katid FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
             INNER JOIN yayin ON kitap.yayin = yayin.id ",PDO::FETCH_OBJ);
         }
         
@@ -33,7 +33,7 @@
      public function detail(){
         if(!isset($_GET["id"])) header("Location:/kitaplar");
         global $db;
-        $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id INNER JOIN yayin ON kitap.yayin = yayin.id where kitap.id=".$_GET['id']."", PDO::FETCH_OBJ)->fetch();
+        $query = $db->query("SELECT *  FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id INNER JOIN yayin ON kitap.yayin = yayin.id where kitap.id=".$_GET['id']."", PDO::FETCH_OBJ)->fetch();
         
         $borrowed = $db->query('SELECT COUNT(id) as sayi FROM odunc WHERE kitap = "'.$query->id.'"', PDO::FETCH_OBJ)->fetch()->sayi > 0;
 

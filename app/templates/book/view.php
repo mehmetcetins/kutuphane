@@ -11,10 +11,13 @@
             <td>Yayıncısı</td><td><input type="text" name="yayinci"></td>
         </tr>
         <tr>
+            <td>ISBN</td><td><input type="text" name="isbn"></td>
+        </tr>
+        <tr>
             <td>Özeti</td><td><textarea name="ozet" cols="30" rows="10"></textarea></td>
         </tr>
         <tr>
-            <td>Baskı Yılı</td><td><input type="text" name="yılı"></td>
+            <td>Baskı Yılı</td><td><input type="text" name="yili"></td>
         </tr>
         <tr>
             <td>Nereden Geldi</td><td><input type="text" name="kaynak"></td>
@@ -26,7 +29,14 @@
             <td>Kapağı</td><td><input type="text" name="kapak"></td>
         </tr>
         <tr>
-            <td colspan="2"><center><input type="submit" value="EKLE"></center></td>
+            <td colspan="2"><center><input type="submit" value="EKLE"></center>
+                <?php
+                if(isset($kitap))
+                    echo "<font color='red'>$kitap</font>";
+                
+                ?>
+            </td>
+
         </tr>
     </table>
 
