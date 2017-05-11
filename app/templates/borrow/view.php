@@ -1,6 +1,43 @@
+
+<style>
+table th{
+    background:#333333;
+    color:white;
+    padding:10px;
+    text-transform:uppercase;
+}
+table td{
+    background:#DDDDDD;
+    color:#444;
+    padding:10px;
+}
+table a{
+    display:block;
+    background:#333333;
+    color:white;
+    padding:10px;
+    text-transform:uppercase;
+}
+.odbutton{
+        background:#EB5757;
+        border:0;
+        padding:10px;
+        text-transform:uppercase;
+        color:white;
+
+    }
+    .odunc{
+
+        padding:10px;
+        text-transform:uppercase;
+        border:1px solid black;
+        
+
+    }
+</style>
 <form action="/odunc" method="post">
-   <h4> OKUL NUMARANIZ <input type="text" name="numara" required> </h4> 
-   <input type="submit">
+   <h4> OKUL NUMARANIZ <input type="text" name="numara" class="odunc" required > </h4> 
+   <input type="submit" class="odbutton" value = "ara">
 </form>
 
 
@@ -22,15 +59,15 @@ if($_POST)
         ?>
 
 
-        <table>
+        <table cellpadding="0" cellspacing="0">
             <tr>
-                <td>kitap adı</td>
-                <td>öğrenci adı</td>
-                <td>Numarasi</td>
-                <td>Sınıfı</td>
-                <td>aldığınız tarih</td>
-                <td>teslim tarihi</td>
-                <td>teslim et</td>
+                <th>kitap adı</th>
+                <th>öğrenci adı</th>
+                <th>Numarasi</th>
+                <th>Sınıfı</th>
+                <th>aldığınız tarih</th>
+                <th>teslim tarihi</th>
+                <th>teslim et</th>
             </tr>
             <?php foreach($query as $qu):?>
              <tr>

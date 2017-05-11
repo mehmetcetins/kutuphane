@@ -6,6 +6,8 @@
         global $db;
         global $e;
         if(isset($_GET["ara"])){
+            if($_GET["ara"] == "")
+                header("location:/");
             $ara = $_GET["ara"];
             $query= $db->query("SELECT *,kitap.id as katid FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id 
             INNER JOIN yayin ON kitap.yayin = yayin.id

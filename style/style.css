@@ -98,5 +98,22 @@ form {
     form .form-group input:not([type=radio]):not([type=checkbox]):active {
       outline: none;
       border-color: black; }
+  .arbutton{
+          background:#EB5757;
+          border:0;
+          padding:10px;
+          text-transform:uppercase;
+          color:white;
+          width:10%;
+      }
+      .ara{
 
+          padding:10px;
+          text-transform:uppercase;
+          border:0;
+          width:89%;
+
+      }
+
+    
 /*# sourceMappingURL=style.css.map */
