@@ -32,6 +32,7 @@ body{
             <nav>
                 <a href="/kitaplar">Kitaplar</a>
                 <a href="/odunc">Odunc Listesi</a>
+                <a href="/kitap">Kitap Ekle</a>
             </nav>
         </div>
     </header>

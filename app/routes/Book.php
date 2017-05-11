@@ -6,9 +6,15 @@ class Book{
         
         session_start();
         if(isset($_SESSION["kitap"])){
-            render("book/view",["kitap" => "Bu kitap daha önce kaydedilmiştir."]);
+            if ($_SESSION["kitap"] == "kaydedildi.") $kitap="Kitap Başarıyla Kaydedildi.";
+            else $kitap ="Bu Kitap Daha Önce Kaydedilmiştir";
             unset($_SESSION["kitap"]);
+            render("book/view",["kitap"=>$kitap]);
+        
         }
+        
+
+        
         else{
             render("book/view");
         }
@@ -57,13 +63,15 @@ class Book{
                 '".$_POST['kaynak']."',
                 '".$_POST['kapak']."',
                 '".$_POST['konum']."',
-                '".$ozet."',
+                ".$ozet.",
                 ".$_POST['yili'].")"
                 );
+                session_start();
+                $_SESSION["kitap"] = "kaydedildi.";
+                header("location:/kitap");
             }
+
             
-
-
 
     }
 }
