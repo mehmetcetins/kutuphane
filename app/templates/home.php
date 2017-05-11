@@ -13,22 +13,7 @@
     .kitap button a {
         text-decoration:none;
     }
-        .arbutton{
-        background:#EB5757;
-        border:0;
-        padding:10px;
-        text-transform:uppercase;
-        color:white;
-        width:10%;
-    }
-    .ara{
-
-        padding:10px;
-        text-transform:uppercase;
-        border:0;
-        width:89%;
-
-    }
+        
     .sonuc {
         color:white;
         font-size:14px;
