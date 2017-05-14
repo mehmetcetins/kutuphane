@@ -86,6 +86,22 @@ footer {
 		}
 	}
 }
+.arbutton{
+        background:#EB5757;
+        border:0;
+        padding:10px;
+        text-transform:uppercase;
+        color:white;
+        width:10%;
+    }
+    .ara{
+
+        padding:10px;
+        text-transform:uppercase;
+        border:0;
+        width:89%;
+
+    }
 
 .book-detail {
 	@include clearAfter();
@@ -131,7 +147,7 @@ form {
 			margin-bottom: 5px;
 		}
 
-		input:not([type=radio]):not([type=checkbox]) {
+		input:not([type=radio]):not([type=checkbox]), textarea {
 			width: 100%;
 			border-radius: 5px;
 			border: 1px solid #ccc;
@@ -146,3 +162,66 @@ form {
 		}
 	}
 }
+
+.stats {
+	margin-top: 50px;
+	font-family: Arial;
+	text-align: center;
+
+	& > div {
+		background: lighten(#333, 10%);
+		display: inline-block;
+		font-size: 2em;
+		padding: 10px;
+		text-align: center;
+		transition: 1s all;
+		cursor: pointer;
+
+		&:hover {
+			color: #FFF;
+		}
+
+		span {
+			display: block;
+			font-size: 0.6em;
+		}
+	}
+}
+
+
+.arbutton{
+	background:#EB5757;
+	border:0;
+	padding:10px;
+	text-transform:uppercase;
+	color:white;
+	width:10%;
+}
+.ara{
+
+	padding:10px;
+	text-transform:uppercase;
+	border:0;
+	width:89%;
+
+}
+
+    .panel{
+
+        margin:100px auto;
+        width:500px;
+        height:80px;
+    }
+
+    .kitap button a {
+        text-decoration:none;
+    }
+        
+    .sonuc {
+        color:white;
+        font-size:14px;
+        text-transform:uppercase;
+        position:relative;
+        bottom:0;
+
+    }

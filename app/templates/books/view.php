@@ -1,7 +1,8 @@
 <div class= "book-detail">
     <img src="<?= $book->resim ?>" alt="resim" align="left" />
     <div class="book-badge">
-        <span><strong>Yazar:</strong> <?= $book->ad; ?></span>
+        <span><strong>Kitap Adı:</strong> <?= $book->ad; ?></span>
+        <span><strong>Yazar:</strong> <?= $book->yazar_ad; ?></span>
         <span><strong>Yayın Evi:</strong> <?= $book->yayin_ad; ?></span>
         <span><strong>Basım Yılı:</strong> <?= $book->yil; ?></span>
         <span><strong>Kitap Yeri:</strong> <?php $arr = explode("-",$book->konum); echo "Blok : $arr[0]   Raf : $arr[1]"; ?></span>

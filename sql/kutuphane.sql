@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.5.1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 10 May 2017, 19:47:45
--- Sunucu sürümü: 5.7.11
--- PHP Sürümü: 7.0.4
+-- Üretim Zamanı: 14 May 2017, 18:43:25
+-- Sunucu sürümü: 10.1.19-MariaDB
+-- PHP Sürümü: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -44,8 +44,8 @@ CREATE TABLE `kitap` (
 --
 
 INSERT INTO `kitap` (`id`, `ad`, `yazar`, `ozet`, `isbn`, `yayin`, `yil`, `kaynak`, `resim`, `konum`) VALUES
-(1, 'Hayvanlardan Tanrılara - Sapiens', 1, '\r\n- Homo sapiens neden ekolojik bir seri katile dönüştü?\r\n- Para neden herkesin güvendiği tek şey?\r\n- Kadınlar üstün sosyal becerilere sahipken, neden çoğu toplum erkek egemen?\r\n- Güç elde etmekte böylesine yetenekli olan insanlar neden bu gücü mutluluğa dönüştürmekte başarısızlar?\r\n- Geleceğin dini bilim mi?\r\n- İnsanların miadı çoktan doldu mu?\r\n100 bin yıl önce Yeryüzü\'nde en az altı farklı insan türü vardı. Günümüzdeyse sadece Homo Sapiens var. Diğerlerinin başına ne geldi ve bize ne olacak? \r\n\r\nÇoğu çalışma insanlığın serüvenini ya tarihi ya da biyolojik bir yaklaşımla ele alır, ancak Harari 70 bin yıl önce gerçekleşen Bilişsel Devrim\'le başlattığı bu kitabında gelenekleri yerle bir ediyor. İnsanların küresel ekosistemde oynadıkları rolden imparatorlukların yükselişine ve modern dünyaya kadar pek çok konuyu irdeleyen Sapiens, tarihle bilimi bir araya getirerek kabul görmüş anlatıları yeniden ele alıyor.\r\n\r\nHarari ayrıca geleceğe bakmaya da zorluyor okuru. Yakın zamanda insanlar, dört milyar yıldır yaşama hükmeden doğal seçilim yasalarını esnetmeye başladılar. Artık sadece dünyayı değil, kendimizi ve diğer canlıları tasarlama becerisi de kazandık. Peki bu bizi nereye götürüyor, bizi neye dönüştürebilir?\r\n\r\n30\'dan fazla dile çevrilmiş bu kışkırtıcı çalışma özellikle Jared Diamond, James Gleick, Matt Ridley ve Robert Wright\'ın eserlerine aşina okurlar için muhteşem bir kaynak.\r\n\r\n"Sapiens, tarihin ve modern dünyanın en büyük sorularını gayet yalın bir dille ele alıyor. Çok seveceksiniz!" \r\n-Jared Diamond, Tüfek, Mikrop ve Çelik\'in yazarı-\r\n\r\n"Harari\'nin eseri kabul görmüş doktrinlerin karşısında duran fikirler ve şaşırtıcı gerçeklerle bezeli."\r\n-John Gray, Financial Times-', '9786055029357', 1, 2016, 'bağış', 'http://i.dr.com.tr/cache/600x600-0/originals/0000000633872-1.jpg', 'D-3'),
-(2, 'Frida', 2, 'Düşlerimi Ya Da Kâbuslarımı Değil Kendi Gerçekliğimi Resmediyorum.”\r\n\r\n \r\n\r\nFrida Kahlo kimdi? Dünyaca ünlü bir ressamdı, bir komünist, bir feminist, bir âşık ve her şeyden öte, bir ablaydı. Frida’da, ünlü ressamın hayat hikâyesini küçük kız kardeşi Cristina’nın gözünden okuyacaksınız. Tablolarında kendi gerçekliğini yaratan Frida gibi, Cristina da ablasını anlatırken kendi gerçekliğini yaratır ve okurları sihirli bir yolculuğa çıkartır.\r\n\r\n \r\n\r\nBárbara Mujica, romanın merkezine Cristina ve Frida Kahlo’yu alarak bizlere kıskançlıkla, ihanetle ve kardeşler arası rekabetle dolu bir aşk hikâyesi sunarken; tutkulu, hayatı boyunca acılar çekmiş ve olağanüstü yetenekli bir kadının zihnine ayna tutuyor.', '9786059115834', 2, 2017, 'bagış', 'http://i.dr.com.tr/cache/600x600-0/originals/0001699441001-1.jpg', 'D-3');
+(5, 'Frida', 2, 'Düşlerimi Ya Da Kâbuslarımı Değil Kendi Gerçekliğimi Resmediyorum.”\r\n\r\nFrida Kahlo kimdi? Dünyaca ünlü bir ressamdı, bir komünist, bir feminist, bir âşık ve her şeyden öte, bir ablaydı. Frida’da, ünlü ressamın hayat hikâyesini küçük kız kardeşi Cristina’nın gözünden okuyacaksınız. Tablolarında kendi gerçekliğini yaratan Frida gibi, Cristina da ablasını anlatırken kendi gerçekliğini yaratır ve okurları sihirli bir yolculuğa çıkartır.', '9786059115834', 2, 2017, 'Bağış', '/uploads/5b76949d3291412c965762094a576366.jpg', 'D-33'),
+(6, 'Hayvanlardan Tanrılara - Sapiens', 1, '- Homo sapiens neden ekolojik bir seri katile dönüştü? - Para neden herkesin güvendiği tek şey? - Kadınlar üstün sosyal becerilere sahipken, neden çoğu toplum erkek egemen? - Güç elde etmekte böylesine yetenekli olan insanlar neden bu gücü mutluluğa dönüştürmekte başarısızlar? - Geleceğin dini bilim mi? - İnsanların miadı çoktan doldu mu? 100 bin yıl önce Yeryüzü''nde en az altı farklı insan türü vardı. Günümüzdeyse sadece Homo Sapiens var. Diğerlerinin başına ne geldi ve bize ne olacak? Çoğu çalışma insanlığın serüvenini ya tarihi ya da biyolojik bir yaklaşımla ele alır, ancak Harari 70 bin yıl önce gerçekleşen Bilişsel Devrim''le başlattığı bu kitabında gelenekleri yerle bir ediyor. İnsanların küresel ekosistemde oynadıkları rolden imparatorlukların yükselişine ve modern dünyaya kadar pek çok konuyu irdeleyen Sapiens, tarihle bilimi bir araya getirerek kabul görmüş anlatıları yeniden ele alıyor. Harari ayrıca geleceğe bakmaya da zorluyor okuru. Yakın zamanda insanlar, dört milyar yıldır yaşama hükmeden doğal seçilim yasalarını esnetmeye başladılar. Artık sadece dünyayı değil, kendimizi ve diğer canlıları tasarlama becerisi de kazandık. Peki bu bizi nereye götürüyor, bizi neye dönüştürebilir? 30''dan fazla dile çevrilmiş bu kışkırtıcı çalışma özellikle Jared Diamond, James Gleick, Matt Ridley ve Robert Wright''ın eserlerine aşina okurlar için muhteşem bir kaynak. "Sapiens, tarihin ve modern dünyanın en büyük sorularını gayet yalın bir dille ele alıyor. Çok seveceksiniz!" -Jared Diamond, Tüfek, Mikrop ve Çelik''in yazarı- "Harari''nin eseri kabul görmüş doktrinlerin karşısında duran fikirler ve şaşırtıcı gerçeklerle bezeli." -John Gray, Financial Times-', '9786055029357', 1, 2016, 'Bağış', '/uploads/c38f82c425a31e054ef9beb76b47e6c4.jpg', 'D-45');
 
 -- --------------------------------------------------------
 
@@ -60,37 +60,6 @@ CREATE TABLE `odunc` (
   `teslim` date NOT NULL,
   `kitap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
-
---
--- Tablo döküm verisi `odunc`
---
-
-INSERT INTO `odunc` (`id`, `ogrenci`, `tarih`, `teslim`, `kitap`) VALUES
-(4, '228', '2017-05-06', '2018-01-01', 1),
-(6, '228', '2017-05-07', '2017-05-18', 2),
-(7, '33', '2017-05-10', '2017-05-26', 2);
-
--- --------------------------------------------------------
-
---
--- Tablo için tablo yapısı `ogrenci`
---
-
-CREATE TABLE `ogrenci` (
-  `id` int(11) NOT NULL,
-  `ogrenci_ad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
-  `soyad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
-  `numara` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
-  `sinif` varchar(20) COLLATE utf8_turkish_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
-
---
--- Tablo döküm verisi `ogrenci`
---
-
-INSERT INTO `ogrenci` (`id`, `ogrenci_ad`, `soyad`, `numara`, `sinif`) VALUES
-(1, 'mehmet', 'çetin', '228', '12-E'),
-(2, 'selami', 'kelaynak', '33', '12-B');
 
 -- --------------------------------------------------------
 
@@ -147,12 +116,6 @@ ALTER TABLE `odunc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `ogrenci`
---
-ALTER TABLE `ogrenci`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Tablo için indeksler `yayin`
 --
 ALTER TABLE `yayin`
@@ -172,27 +135,22 @@ ALTER TABLE `yazar`
 -- Tablo için AUTO_INCREMENT değeri `kitap`
 --
 ALTER TABLE `kitap`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Tablo için AUTO_INCREMENT değeri `odunc`
 --
 ALTER TABLE `odunc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- Tablo için AUTO_INCREMENT değeri `ogrenci`
---
-ALTER TABLE `ogrenci`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Tablo için AUTO_INCREMENT değeri `yayin`
 --
 ALTER TABLE `yayin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Tablo için AUTO_INCREMENT değeri `yazar`
 --
 ALTER TABLE `yazar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -31,9 +31,8 @@ body{
             <div class="logo"><a href="/">KUTUPHANE</a></div>
             <nav>
                 <a href="/kitaplar">Kitaplar</a>
-                <a href="#">Odunc Listesi</a>
-                <a href="#">Ogrenci Listesi</a>
-                <a href="#">Yoneticiler</a>
+                <a href="/odunc">Odunc Listesi</a>
+                <a href="/kitaplar/ekle">Kitap Ekle</a>
             </nav>
         </div>
     </header>

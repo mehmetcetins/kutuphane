@@ -62,6 +62,20 @@ footer {
       color: black;
       text-align: center; }
 
+.arbutton {
+  background: #EB5757;
+  border: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  width: 10%; }
+
+.ara {
+  padding: 10px;
+  text-transform: uppercase;
+  border: 0;
+  width: 89%; }
+
 .book-detail:after {
   clear: both;
   display: block;
@@ -88,15 +102,62 @@ form {
     display: block;
     font-size: 1.1em;
     margin-bottom: 5px; }
-  form .form-group input:not([type=radio]):not([type=checkbox]) {
+  form .form-group input:not([type=radio]):not([type=checkbox]), form .form-group textarea {
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
     transition: 1s all;
     padding: 5px;
     font-size: 1.1em; }
-    form .form-group input:not([type=radio]):not([type=checkbox]):active {
+    form .form-group input:not([type=radio]):not([type=checkbox]):active, form .form-group textarea:active {
       outline: none;
       border-color: black; }
+
+.stats {
+  margin-top: 50px;
+  font-family: Arial;
+  text-align: center; }
+  .stats > div {
+    background: #4d4d4d;
+    display: inline-block;
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+    transition: 1s all;
+    cursor: pointer; }
+    .stats > div:hover {
+      color: #FFF; }
+    .stats > div span {
+      display: block;
+      font-size: 0.6em; }
+
+.arbutton {
+  background: #EB5757;
+  border: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  width: 10%; }
+
+.ara {
+  padding: 10px;
+  text-transform: uppercase;
+  border: 0;
+  width: 89%; }
+
+.panel {
+  margin: 100px auto;
+  width: 500px;
+  height: 80px; }
+
+.kitap button a {
+  text-decoration: none; }
+
+.sonuc {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
