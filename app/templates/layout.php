@@ -28,10 +28,10 @@ body{
 <body>
     <header>
         <div class="container">
-            <div class="logo"><a href="/">KUTUPHANE</a></div>
+            <div class="logo"><a href="/">KÜTÜPHANE</a></div>
             <nav>
                 <a href="/kitaplar">Kitaplar</a>
-                <a href="/odunc">Odunc Listesi</a>
+                <a href="/odunc">Ödünç Listesi</a>
                 <a href="/kitaplar/ekle">Kitap Ekle</a>
             </nav>
         </div>
