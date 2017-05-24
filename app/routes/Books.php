@@ -46,14 +46,15 @@
      }
      
      public function borrow(){
-        global $db;
+        /*global $db;
         $db->exec("INSERT INTO odunc(ogrenci,tarih,teslim,kitap) values(
         '".$_POST["ogrenci"]."',
         '".date("Y-m-d")."',
         '".date("Y-m-d",strtotime($_POST["teslim"]))."',
         ".$_GET["id"]."
         )");
-        header("location:/kitaplar");
+        header("location:/kitaplar");*/
+        echo "odunc alındı.";
      }
 
      public function add(){

@@ -225,3 +225,42 @@ form {
         bottom:0;
 
     }
+	.warningx{
+		display:none;
+		position:fixed;
+		background:rgba(0,0,0,0.7);
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		.warning {
+			border:3px solid white;
+			position:absolute;
+			top:calc(50% - 200px);
+			left:calc(50% - 300px);
+			background:black;
+			box-sizing: border-box;
+			width:624px;
+			height:371px;
+			padding:50px;
+			color:white;
+			font-size:24px;
+			
+			p {
+				color:White;
+			}
+			div {
+				margin-top:70px;
+				display:flex;
+				justify-content: space-between;
+				input{
+					background:black;
+					border:4px solid white;
+					width:193px;
+					height:71px;
+					font-size:24px;
+					color:white;
+				}
+			}
+		}
+	}

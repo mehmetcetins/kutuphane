@@ -30,7 +30,18 @@
             </div>
             <div class="form-group">
                 <label></label>
-                <input type="submit" name "borrow" value="Ödünç Ver">
+                <input type="submit" class="buttonx" name="borrow" value="Ödünç Ver">
+            </div>
+            <div class="warningx">
+                <div class="warning">
+                    <p>
+                    <script>var book = <?=json_encode($book); ?></script>
+                    </p>
+                    <div>
+                        <input type="submit" value="Onayla">
+                        <input type="submit" class = "cancel" value="İptal Et">
+                    </div>
+                </div>
             </div>
         </form>
 

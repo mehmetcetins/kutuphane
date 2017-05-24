@@ -39,6 +39,8 @@ body{
     <div class="container main-content">
         <?php echo $content ?>
     </div>
+    <script src="/script/jquery.js"></script>
+    <script src="/script/js.js"></script>
     <footer class="container">
         Kutuphane Yonetim Sistemi &copy; Mehmet Cetin
     </footer>
