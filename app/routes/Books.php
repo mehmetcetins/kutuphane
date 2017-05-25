@@ -46,15 +46,14 @@
      }
      
      public function borrow(){
-        /*global $db;
+        global $db;
         $db->exec("INSERT INTO odunc(ogrenci,tarih,teslim,kitap) values(
         '".$_POST["ogrenci"]."',
         '".date("Y-m-d")."',
         '".date("Y-m-d",strtotime($_POST["teslim"]))."',
         ".$_GET["id"]."
         )");
-        header("location:/kitaplar");*/
-        echo "odunc alındı.";
+        header("location:/kitaplar");
      }
 
      public function add(){
@@ -62,7 +61,7 @@
         session_start();
         if(isset($_SESSION["kitap"])){
             if ($_SESSION["kitap"] == "kaydedildi.") $kitap="Kitap Başarıyla Kaydedildi.";
-            if ($_SESSION["kitap"] == "konumhata") $kitap="Lütfen konumu doğru formatta giriniz.";
+            else if ($_SESSION["kitap"] == "konumhata") $kitap="Lütfen konumu doğru formatta giriniz.";
             else $kitap ="Bu Kitap Daha Önce Kaydedilmiştir";
             unset($_SESSION["kitap"]);
             render("books/add",["kitap"=>$kitap]);

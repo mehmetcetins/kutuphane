@@ -14,6 +14,19 @@ $(document).ready(function(){
        return false; 
     });
 
+    $(".give").click(function(){
+        $(".warningx").css("display","block");
+        var numara = $(this).attr('o-numara');
+        var kitap = $(this).attr('o-kitap');
+        var tarih = new Date().toLocaleDateString();
+        var href = $(this).attr("href");
+        $(".warning p").html(numara + " numaralı öğrenci " + kitap + " isimli kitabı bugün (" + tarih + ") teslim ediyor. Onaylıyor musunuz ?");
+        $(".accept").attr('href', href);
+        
+        return false;
+
+
+    });
 
 });
 

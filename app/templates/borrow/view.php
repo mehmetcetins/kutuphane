@@ -40,7 +40,7 @@ table a{
 </style>
 <form action="/odunc" method="post">
    <h4> OKUL NUMARASI <input type="text" name="numara" value="<?= @$_POST['numara'] ?>" class="odunc" required > </h4> 
-   <input type="submit" class="odbutton" value = "ara">
+   <input class="odbutton" type="submit" value = "ara">
 </form>
 
 
@@ -56,11 +56,14 @@ $query = $db->query(
 "SELECT *,odunc.id as odid FROM odunc INNER JOIN kitap ON odunc.kitap = kitap.id" . $where,
 PDO::FETCH_OBJ
 );
+
+
 if(!$query->rowCount()){
     echo "Gösterilecek veri bulunamadı.";
 }
 
-    else {
+    else { 
+        
         ?>
 
 
@@ -79,13 +82,22 @@ if(!$query->rowCount()){
 
                 <td><?=$qu->tarih?></td>
                 <td><?=$qu->teslim?></td>
-                <td><a href="/odunc/teslim?id=<?=$qu->odid?>">teslim et</a></td>
+                <td><a class="give" o-kitap="<?= $qu->ad ?>" o-numara="<?= $qu->ogrenci ?>" href="/odunc/teslim?id=<?=$qu->odid?>">teslim et</a></td>
             </tr>
             <?php endforeach;?>
             
             
         </table>
-
+        <div class="warningx">
+                <div class="warning">
+                    <p>
+                    </p>
+                    <div>
+                        <a class="accept" href="#">Onayla</a>
+                        <a class = "cancel" href="#">İptal Et</a>
+                    </div>
+                </div>
+            </div>
 
 
         <?php
