@@ -32,6 +32,11 @@
                 <label></label>
                 <input type="submit" class="buttonx" name="borrow" value="Ödünç Ver">
             </div>
+            <?php session_start(); if(isset($_SESSION["ogrenci"])) { unset($_SESSION["ogrenci"]); ?>
+            <div class="form-group">
+                <label><font color= "red">Öğrenci Bulunamadı</font> </label>
+            </div>
+            <?php }?>
             <div class="warningx">
                 <div class="warning">
                     <p>

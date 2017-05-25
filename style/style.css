@@ -80,17 +80,21 @@ footer {
   clear: both;
   display: block;
   content: ""; }
+
 .book-detail img {
   margin-right: 20px;
   width: 415px; }
+
 .book-detail .book-badge span {
   display: block; }
   .book-detail .book-badge span strong {
     display: inline-block;
     min-width: 100px;
     font-size: 1.2em; }
+
 .book-detail .book-summary {
   margin: 20px 0; }
+
 .book-detail .book-borrow form {
   margin-left: 435px; }
 
@@ -202,5 +206,3 @@ form {
         color: white;
         text-decoration: none;
         text-align: center; }
-
-/*# sourceMappingURL=style.css.map */

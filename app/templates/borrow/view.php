@@ -12,7 +12,7 @@ table td{
     padding:10px;
 }
 table td:first-child {
-    width:240px;
+    width:200px;
 }
 table a{
     display:block;
@@ -53,9 +53,11 @@ if($_POST) {
 }
 
 $query = $db->query(
-"SELECT *,odunc.id as odid FROM odunc INNER JOIN kitap ON odunc.kitap = kitap.id" . $where,
-PDO::FETCH_OBJ
-);
+    "SELECT *,kitap.ad as kitad,odunc.id as odid,ogrenci.ad as ogad FROM odunc 
+    INNER JOIN kitap ON odunc.kitap = kitap.id 
+    INNER JOIN ogrenci ON odunc.ogrenci = ogrenci_no" . $where,
+    PDO::FETCH_OBJ
+    );
 
 
 if(!$query->rowCount()){
@@ -71,15 +73,16 @@ if(!$query->rowCount()){
             <tr>
                 <th>kitap adı</th>
                 <th>Numarasi</th>
+                <th>Adı</th>
                 <th>aldığınız tarih</th>
                 <th>teslim tarihi</th>
                 <th>teslim et</th>
             </tr>
             <?php foreach($query as $qu):?>
              <tr>
-                <td><?=$qu->ad?></td>
+                <td><?=$qu->kitad?></td>
                 <td><?=$qu->ogrenci?></td>
-
+                <td><?=$qu->ogad." ".$qu->soyad?></td>
                 <td><?=$qu->tarih?></td>
                 <td><?=$qu->teslim?></td>
                 <td><a class="give" o-kitap="<?= $qu->ad ?>" o-numara="<?= $qu->ogrenci ?>" href="/odunc/teslim?id=<?=$qu->odid?>">teslim et</a></td>

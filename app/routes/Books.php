@@ -47,6 +47,13 @@
      
      public function borrow(){
         global $db;
+        
+        if($db->query("select * from ogrenci where ogrenci_no =  ".$_POST["ogrenci"]." ")->rowCount() == 0)  {
+            session_start();
+            $_SESSION["ogrenci"] = "Ogrenci Bulunamadı.";
+            header("location:/kitaplar/detay?id=".$_GET["id"]);
+        }
+        else {
         $db->exec("INSERT INTO odunc(ogrenci,tarih,teslim,kitap) values(
         '".$_POST["ogrenci"]."',
         '".date("Y-m-d")."',
@@ -54,6 +61,8 @@
         ".$_GET["id"]."
         )");
         header("location:/kitaplar");
+        }
+        
      }
 
      public function add(){
