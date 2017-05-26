@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 18 May 2017, 21:35:22
+-- Üretim Zamanı: 26 May 2017, 05:10:27
 -- Sunucu sürümü: 10.1.19-MariaDB
 -- PHP Sürümü: 5.6.24
 
@@ -67,14 +67,14 @@ CREATE TABLE `odunc` (
 
 CREATE TABLE `yayin` (
   `id` int(11) NOT NULL,
-  `ad` varchar(200) COLLATE utf8_turkish_ci NOT NULL
+  `y_ad` varchar(200) COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `yayin`
 --
 
-INSERT INTO `yayin` (`id`, `ad`) VALUES
+INSERT INTO `yayin` (`id`, `y_ad`) VALUES
 (1, 'Kolektif Kitap');
 
 -- --------------------------------------------------------
