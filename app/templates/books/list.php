@@ -64,7 +64,7 @@ body{
     <div class="contents">
         <div>
             <img src="<?= $kitap->resim ?>" alt="RESİM">
-            <center><span><?= $kitap->ad ?></span></center>
+            <center> <span><?= $kitap->ad ?></span></center>
             <a class="button" href="kitaplar/detay?id=<?= $kitap->id?>">incele</a>
         </div>
     </div>
