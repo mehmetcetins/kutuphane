@@ -33,11 +33,13 @@
      public function detail(){
         if(!isset($_GET["id"])) header("Location:/kitaplar");
         global $db;
-        $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id INNER JOIN yayin ON kitap.yayin = yayin.id where kitap.id=".$_GET['id']."",PDO::FETCH_OBJ);
+        $query = $db->query("SELECT * FROM kitap INNER JOIN yazar ON kitap.yazar = yazar.id INNER JOIN yayin ON kitap.yayin = yayin.id where kitap.id=".$_GET['id']."", PDO::FETCH_OBJ)->fetch();
         
-        if($query->rowCount())
+        $borrowed = $db->query('SELECT COUNT(id) as sayi FROM odunc WHERE kitap = "'.$query->id.'"', PDO::FETCH_OBJ)->fetch()->sayi > 0;
+
+        if($query)
         {
-            render("books/view", ["detail"=>$query]);
+            render("books/view", ["book"=>$query, "borrowed" => $borrowed]);
         }
 
      }
