@@ -63,7 +63,7 @@ FILE *fg,*fg1;
     5.okunan veriyi numarayla ile karsilastir evet ise kullanicidan isim,soyismi ve numarayı al hayır ise devam et.
     6.kayıtları gecici dosyaya yazdir.
     7.bir sonraki kaydı oku.
-    8.dosyayının sonuna gelinmemişse devam et.
+    8.dosyayının sonuna gelinmemişse 5.adıma dön gelinmişse 9. adımdan devam et.
     9.dosyaları kapat.
     10.dosyayı sil
     11.gecici dosya ile dosyanın adının değiştir.
