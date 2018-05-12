@@ -15,7 +15,7 @@ yaz(char dosya[20]){
     abone a2;
     FILE *f;
     f = fopen(dosya,"r");
-    fread(&a2,20,1,f);
+    fread(&a2,sizeof(a2),1,f);
     while(feof(f) == 0){
         printf("isim %10s soyisim %10s tel %10s\n",a2.ad,a2.soyad,a2.tel);
         fread(&a2,sizeof(a2),1,f);
